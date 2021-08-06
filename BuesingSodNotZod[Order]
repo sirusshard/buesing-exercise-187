@@ -1,7 +1,7 @@
 //AUTHOR: Zach Buesing
 //COURSE: CPT 187
 //PURPOSE: Stores and calculates values for item labeling, searching, and stock counts.
-//CREATEDATE: 7/22/2021
+//CREATEDATE: 8/5/2021
 package edu.cpt187.buesing.exercise6;
 
 //Beginning of Order
