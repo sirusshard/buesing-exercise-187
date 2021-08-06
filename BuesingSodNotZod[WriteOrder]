@@ -1,7 +1,7 @@
 //AUTHOR: Zach Buesing
 //COURSE: CPT 187
 //PURPOSE: Storing changes to chosen items to ensure stock accuracy. 
-//CREATEDATE: 7/22/2021
+//CREATEDATE: 8/5/2021
 package edu.cpt187.buesing.exercise6;
 
 //Importing PrintWriter
