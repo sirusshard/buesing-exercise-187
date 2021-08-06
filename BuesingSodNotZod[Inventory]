@@ -1,7 +1,7 @@
 //AUTHOR: Zach Buesing
 //COURSE: CPT 187
 //PURPOSE: Stores and calculates values for order pricing and stores counts of order values, including items, discounts, and prizes. 
-//CREATEDATE: 7/22/2021
+//CREATEDATE: 8/5/2021
 package edu.cpt187.buesing.exercise6;
 
 //Importing Scanner
@@ -20,19 +20,19 @@ import java.util.Random;
 public class Inventory 
 {
 	//Declaring and Initializing Class Attributes
-	private String[] DISCOUNT_NAMES = {"Subscriber", "Special Offer", "Coupon", "No Discount"};
-	private double[] DISCOUNT_RATES = {0.3, 0.2, 0.1, 0};
-	private String[] PRIZE_NAMES = {"Tier 1", "Tier 2", "Tier 3"};
+	private final String[] DISCOUNT_NAMES = {"Subscriber", "Special Offer", "Coupon", "No Discount"};
+	private final double[] DISCOUNT_RATES = {0.3, 0.2, 0.1, 0};
+	private final String[] PRIZE_NAMES = {"Tier 1", "Tier 2", "Tier 3"};
 	private final int MAX_RECORDS = 25;
 	private final int NOT_FOUND = -1;
 	private final int ONE = 1;
 	private final int RESET_VALUE = 0;
-	private int[] itemIDs = new int[25];
-	private String[] itemNames = new String[25]; 
-	private double[] itemPrices = new double[25]; 
-	private int[] orderQuantities = new int[25]; 
-	private double[] orderTotals = new double[25];
-	private int[] inStockCounts = new int[25]; 
+	private int[] itemIDs = new int[MAX_RECORDS];
+	private String[] itemNames = new String[MAX_RECORDS]; 
+	private double[] itemPrices = new double[MAX_RECORDS]; 
+	private int[] orderQuantities = new int[MAX_RECORDS]; 
+	private double[] orderTotals = new double[MAX_RECORDS];
+	private int[] inStockCounts = new int[MAX_RECORDS]; 
 	private int itemSearchIndex = 0;
 	private int recordCount = 0;
 
@@ -369,7 +369,7 @@ public class Inventory
 	{
 		//Declaring and Initializing Local Variables
 		int localIndex = 0;
-		double localGrandTotal = 0;
+		double localGrandTotal = 0.0;
 
 		//Beginning of Run-While Loop (localIndex is Less Than the length of orderTotals)
 		while (localIndex < orderTotals.length)
