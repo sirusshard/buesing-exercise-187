@@ -2,7 +2,7 @@
 //COURSE: CPT 187
 //PURPOSE: Selection and calculation of order information, including item and discount selection, prize generation, and creation and tracking of user accounts. 
 //		   Order information and item stock counts are tracked and displayed to the user.
-//CREATEDATE: 7/22/2021
+//CREATEDATE: 8/5/2021
 package edu.cpt187.buesing.exercise6;
 
 //Importing Scanner
@@ -466,7 +466,7 @@ public class BuesingMainClass
 		System.out.println("Enter your username:");
 
 		//Accepting User Input
-		localUserName = borrowedInput.nextLine();
+		localUserName = borrowedInput.next();
 
 		return localUserName;
 	}//End of getUserName
@@ -481,7 +481,7 @@ public class BuesingMainClass
 		System.out.println("Enter your password:");
 
 		//Accepting User Input
-		localPassword = borrowedInput.nextLine();
+		localPassword = borrowedInput.next();
 
 		return localPassword;
 	}//End of getPassword
@@ -519,13 +519,13 @@ public class BuesingMainClass
 	public static int validateSearchValue(Scanner borrowedInput)
 	{
 		//Declaring and Initializing local variables
-		String localSearchValue = "";
+		int localSearchValue = 0;
 
 		//Prompt for Search Value Input
 		displaySearchPrompt();
 
-		localSearchValue = borrowedInput.next();
-		return Integer.valueOf(localSearchValue);
+		localSearchValue = borrowedInput.nextInt();
+		return localSearchValue;
 	}//End of getSearchValue
 
 	//This Behavior Will Get The File Name
